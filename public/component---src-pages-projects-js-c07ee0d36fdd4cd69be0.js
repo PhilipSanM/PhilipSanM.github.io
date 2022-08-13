@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[853],{7219:function(e,t,l){l.r(t);var a=l(7294),r=l(3702),n=l(4584);t.default=function(e){var t=e.data.allStrapiProject.nodes;return a.createElement(a.Fragment,null,a.createElement(n.Z,{title:"Projects"}),a.createElement("main",null,a.createElement("section",{className:"projects-page"},a.createElement(r.Z,{title:"all projects",projects:t}))))}}}]);
+//# sourceMappingURL=component---src-pages-projects-js-c07ee0d36fdd4cd69be0.js.map
