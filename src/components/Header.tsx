@@ -68,6 +68,15 @@ export const Header: React.FC<HeaderProps> = ({ name, title, bio, contacts }) =>
           <p className="abstract-label">{ABSTRACT}</p>
           <p className="bio-text">{bio}</p>
         </div>
+        <div className="sponsor-section">
+          <iframe
+            src="https://github.com/sponsors/PhilipSanM/button"
+            title="Sponsor PhilipSanM"
+            height="32"
+            width="114"
+            className="sponsor-iframe"
+          />
+        </div>
 
       </div>
     </header>
