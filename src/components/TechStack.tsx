@@ -1,48 +1,80 @@
 import React from 'react';
-import { FaGitAlt, FaGithub, FaHtml5, FaNodeJs } from 'react-icons/fa';
-import { SiCss, SiJavascript, SiLeetcode, SiLess, SiReact, SiTypescript, SiVite } from 'react-icons/si';
+import { FaAws, FaDocker, FaGitAlt, FaLinux } from 'react-icons/fa';
+import {
+  SiGraphql,
+  SiJavascript,
+  SiJenkins,
+  SiKubernetes,
+  SiLangchain,
+  SiMlflow,
+  SiMongodb,
+  SiNumpy,
+  SiPandas,
+  SiPython,
+  SiPytorch,
+  SiReact,
+  SiTypescript,
+} from 'react-icons/si';
 import '../styles/TechStack.less';
 
 const techList = [
+  'Python',
+  'NumPy',
+  'Pandas',
+  'PyTorch',
+  'LangChain',
+  'MLflow',
   'TypeScript',
-  'React',
-  'Vite',
-  'Less',
-  'HTML',
-  'CSS',
   'JavaScript',
-  'Node.js',
+  'React',
+  'MongoDB',
+  'GraphQL',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'Amplitude',
   'Git',
-  'LeetCode',
-  'GitHub',
+  'Jenkins',
 ];
 
 const getTechIcon = (tech: string): React.ReactNode => {
   switch (tech) {
+    case 'Python':
+      return <SiPython />;
+    case 'NumPy':
+      return <SiNumpy />;
+    case 'Pandas':
+      return <SiPandas />;
+    case 'PyTorch':
+      return <SiPytorch />;
+    case 'LangChain':
+      return <SiLangchain />;
+    case 'MLflow':
+      return <SiMlflow />;
     case 'TypeScript':
       return <SiTypescript />;
-    case 'React':
-      return <SiReact />;
-    case 'Vite':
-      return <SiVite />;
-    case 'Less':
-      return <SiLess />;
-    case 'HTML':
-      return <FaHtml5 />;
-    case 'CSS':
-      return <SiCss />;
     case 'JavaScript':
       return <SiJavascript />;
-    case 'Node.js':
-      return <FaNodeJs />;
+    case 'React':
+      return <SiReact />;
+    case 'MongoDB':
+      return <SiMongodb />;
+    case 'GraphQL':
+      return <SiGraphql />;
+    case 'Docker':
+      return <FaDocker />;
+    case 'Kubernetes':
+      return <SiKubernetes />;
+    case 'AWS':
+      return <FaAws />;
+    case 'Amplitude':
+      return <FaLinux />;
     case 'Git':
       return <FaGitAlt />;
-    case 'LeetCode':
-      return <SiLeetcode />;
-    case 'GitHub':
-      return <FaGithub />;
+    case 'Jenkins':
+      return <SiJenkins />;
     default:
-      return null;
+      return <FaLinux />;
   }
 };
 

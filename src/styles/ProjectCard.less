@@ -31,6 +31,33 @@
     }
   }
 
+  .project-image {
+    width: auto;
+    height: clamp(220px, 50vw, 220px);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: -1.5rem -1.5rem 0;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  }
+
+  &:not(.featured) {
+    .project-image {
+      height: 300px;
+      width: min(75%, 400px);
+      margin: 0.8rem auto 0;
+    }
+  }
+
   .project-header {
     display: flex;
     justify-content: space-between;
@@ -211,6 +238,21 @@
           background: #1a1a1a;
           border-color: #1a1a1a;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    .project-image {
+      height: 180px;
+    }
+
+    &:not(.featured) {
+      .project-image {
+        height: 130px;
+        width: min(100%, 240px);
       }
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaKaggle } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaKaggle, FaFilePdf } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import type { Contact } from '../types';
 import '../styles/Header.less';
@@ -76,6 +76,15 @@ export const Header: React.FC<HeaderProps> = ({ name, title, bio, contacts }) =>
             width="114"
             className="sponsor-iframe"
           />
+          <a
+            href="/resumegg.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-button"
+          >
+            <FaFilePdf />
+            Resume
+          </a>
         </div>
 
       </div>

@@ -7,8 +7,15 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const hasImage = Boolean(project.imageUrl);
+
   return (
     <article className={`project-card ${project.featured ? 'featured' : ''}`}>
+      {hasImage && project.featured && (
+        <div className="project-image">
+          <img src={project.imageUrl} alt={project.title} />
+        </div>
+      )}
       <div className="project-header">
         <h3 className="project-title">{project.title}</h3>
         {project.year && <span className="project-year">{project.year}</span>}
@@ -50,6 +57,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </a>
         )}
       </div>
+
+      {hasImage && !project.featured && (
+        <div className="project-image">
+          <img src={project.imageUrl} alt={project.title} />
+        </div>
+      )}
     </article>
   );
 };
