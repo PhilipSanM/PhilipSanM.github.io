@@ -1,0 +1,140 @@
+.paper-header {
+  position: relative;
+  padding: 1.25rem 2rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    height: 4px;
+    background: #111;
+  }
+
+  .header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+  }
+
+  .title-section {
+    max-width: 700px;
+
+    .paper-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+      font-family: 'Georgia', serif;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .paper-subtitle {
+      font-size: 1.3rem;
+      color: #666;
+      margin: 0 0 1rem;
+      font-weight: 500;
+      font-style: italic;
+      font-family: 'Georgia', serif;
+    }
+  }
+
+  .bio-section {
+    width: min(760px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 1rem 1.25rem 1.25rem;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    text-align: left;
+
+    @media (max-width: 768px) {
+      width: calc(100% - 1rem);
+      padding: 0.9rem 0.95rem 1rem;
+    }
+  }
+
+  .bio-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #2f2f2f;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: #f0f0f0;
+      border-color: #5a5a5a;
+      color: #111;
+    }
+
+    .contact-icon {
+      display: inline-block;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  .header-divider {
+    width: calc(100vw - 4rem);
+    max-width: calc(100vw - 4rem);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d0d0d0, transparent);
+    opacity: 0.8;
+  }
+
+  .abstract-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+    text-align: center;
+  }
+}
