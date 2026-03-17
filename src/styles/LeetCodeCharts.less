@@ -1,0 +1,165 @@
+// LeetCode D3 Charts shared styles
+
+// ── Rating Line Chart ──────────────────────────────────────
+.lc-chart-wrapper {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem 1.25rem 0.75rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+
+  .lc-chart-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lc-chart-title {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .lc-rating-value {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+  }
+
+  .lc-chart-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    font-size: 0.78rem;
+    margin-top: 0.15rem;
+
+    .lc-meta-date {
+      color: #aaa;
+      font-size: 0.72rem;
+    }
+
+    .lc-meta-contest {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .lc-meta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .lc-meta-sep {
+      color: #ccc;
+      font-size: 0.75rem;
+    }
+
+    .lc-meta-item {
+      color: #666;
+      strong {
+        color: #222;
+      }
+    }
+  }
+
+  .lc-chart-svg-container {
+    margin: 0 -0.25rem;
+  }
+}
+
+// ── Solved Donut Chart ──────────────────────────────────────
+.lc-solved-wrapper {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+
+  .lc-solved-header {
+    margin-bottom: 0.85rem;
+  }
+
+  .lc-solved-title {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .lc-solved-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  .lc-solved-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    flex: 1;
+  }
+
+  .lc-legend-row {
+    display: grid;
+    grid-template-columns: 10px 38px 1fr auto;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.15s;
+
+    &:hover,
+    &.active {
+      background: #f5f5f5;
+    }
+
+    .lc-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .lc-legend-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .lc-legend-count {
+      font-size: 0.8rem;
+      color: #1a1a1a;
+
+      strong {
+        font-weight: 700;
+      }
+
+      .lc-legend-total {
+        color: #aaa;
+        font-size: 0.73rem;
+      }
+    }
+
+    .lc-legend-beats {
+      font-size: 0.72rem;
+      color: #888;
+      white-space: nowrap;
+    }
+  }
+}

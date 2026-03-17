@@ -2,6 +2,8 @@ import { Header } from './components/Header'
 import { ProjectsSection } from './components/ProjectsSection'
 import { TechStack } from './components/TechStack'
 import { StatsSection } from './components/StatsSection'
+import { LeetCodeRatingChart } from './components/LeetCodeRatingChart'
+import { LeetCodeSolvedChart } from './components/LeetCodeSolvedChart'
 import { portfolioData } from './data/portfolio'
 import './styles/index.less'
 
@@ -23,13 +25,15 @@ function App() {
         <h2 style={{ textAlign: 'center', margin: '1rem 0 1.5rem', fontSize: '1.8rem', color: '#1a1a1a' }}>
           Technologies/Tools I love and Stats
         </h2>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', alignItems: 'flex-start', flexWrap: 'nowrap', maxWidth: '1400px', margin: '0 auto', padding: '0 1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', alignItems: 'flex-start', flexWrap: 'wrap', maxWidth: '1400px', margin: '0 auto', padding: '0 1rem' }}>
           
           <div style={{ flex: 1, minWidth: '300px' }}>
-          <TechStack />
+            <TechStack />
+            <LeetCodeRatingChart />
+            <LeetCodeSolvedChart />
           </div>
           <div style={{ flex: 1, minWidth: '350px' }}>
-          <StatsSection />
+            <StatsSection />
           </div>
         </div>
       </section>
