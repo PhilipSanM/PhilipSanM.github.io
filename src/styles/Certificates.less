@@ -1,0 +1,35 @@
+.certificates-section {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+
+  .certificates-title {
+    text-align: center;
+    margin: 0 0 2rem;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-section {
+    margin: 2rem auto;
+
+    .certificates-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .certificates-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}

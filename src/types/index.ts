@@ -28,6 +28,15 @@ export interface Project {
   featured?: boolean;
 }
 
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  year: number;
+  imageUrl?: string;
+  link?: string;
+}
+
 export interface PortfolioData {
   author: {
     name: string;
@@ -37,6 +46,7 @@ export interface PortfolioData {
   };
   contacts: Contact[];
   projects: Project[];
+  certificates?: Certificate[];
   research?: {
     interests: string[];
     publications?: string[];

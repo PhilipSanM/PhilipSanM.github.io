@@ -1,10 +1,12 @@
 import { Header } from './components/Header'
 import { ProjectsSection } from './components/ProjectsSection'
+import { Certificates } from './components/Certificates'
 import { TechStack } from './components/TechStack'
 import { StatsSection } from './components/StatsSection'
 import { LeetCodeRatingChart } from './components/LeetCodeRatingChart'
 import { LeetCodeSolvedChart } from './components/LeetCodeSolvedChart'
 import { portfolioData } from './data/portfolio'
+import { certificates } from './data/certificates'
 import './styles/index.less'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       />
 
       <ProjectsSection projects={portfolioData.projects} />
+
+      <Certificates certificates={certificates} />
 
       <section>
         <h2 style={{ textAlign: 'center', margin: '1rem 0 1.5rem', fontSize: '1.8rem', color: '#1a1a1a' }}>
