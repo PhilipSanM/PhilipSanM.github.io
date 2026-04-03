@@ -12,6 +12,7 @@ interface HeaderProps {
 }
 
 const ABSTRACT = 'Abstract';
+const RESUME_URL = new URL('../assets/FelipeSanchezMartinez_Resume_gg.pdf', import.meta.url).href;
 
 const getContactIcon = (contact: Contact): React.ReactNode => {
   const label = contact.label.toLowerCase();
@@ -77,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, bio, contacts }) =>
             className="sponsor-iframe"
           />
           <a
-            href="./src/assets/FelipeSanchezMartinez_Resume_gg.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button"
