@@ -1,49 +1,54 @@
-# React + TypeScript + Vite
+# philipsanm.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![uwu](src/assets/uwu.png)
 
-Currently, two official plugins are available:
+Hi, this is my GitHub Page portfolio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The design is inspired by a research-paper style layout. If you think it could be useful, feel free to clone it and adapt it.
 
-## React Compiler
+## Developer environment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install:
 
-## Expanding the ESLint configuration
+- Node.js
+- npm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Setup:
 
-```js
-export default defineConfig([
-  # PhilipSanM Portfolio
+1. Clone this repository.
+2. Run `npm ci`.
+3. Run `npm run dev`.
 
-  Personal portfolio built with React, TypeScript, Vite, Less, and D3.
+## Tech stack and tools
 
-  ## Local Development
+- React 19
+- TypeScript
+- Vite
+- Less
+- D3 (for chart components)
+- ESLint
 
-  ```bash
-  npm ci
-  npm run dev
-  ```
+## Available scripts
 
-  ## Production Build
+- `npm run dev`: starts local dev server.
+- `npm run build`: creates production build.
+- `npm run preview`: previews production build locally.
+- `npm run lint`: runs lint checks.
 
-  ```bash
-  npm run build
-  ```
+## Project structure
 
-  ## GitHub Pages Deploy
+- `src/components`: reusable UI components.
+- `src/data`: portfolio content and chart data.
+- `src/styles`: Less styles by section/component.
+- `src/assets`: images and static media used by the site.
+- `public`: public static files.
 
-  This repository now includes a GitHub Actions workflow at `.github/workflows/deploy.yml`.
+## Build
 
-  To deploy correctly on GitHub Pages:
+Run `npm run build` to create a production build.
 
-  1. Push this repository to the `main` branch.
-  2. In GitHub, open `Settings` → `Pages`.
-  3. Set `Source` to `GitHub Actions`.
-  4. Push again, or run the `Deploy to GitHub Pages` workflow manually from the `Actions` tab.
+## Deploy notes
 
-  After that, GitHub will build the Vite app, publish `dist`, and files from `public/` such as `favicon.svg` will be available at the site root.
-// eslint.config.js
+This site is intended for GitHub Pages deployment. Build output is generated in `dist`.
+
+If you use GitHub Actions for deploy, push to your main branch and make sure GitHub Pages is configured to use Actions as the source.

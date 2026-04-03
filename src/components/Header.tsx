@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, bio, contacts }) =>
             className="sponsor-iframe"
           />
           <a
-            href="/resumegg.pdf"
+            href="./src/assets/FelipeSanchezMartinez_Resume_gg.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button"

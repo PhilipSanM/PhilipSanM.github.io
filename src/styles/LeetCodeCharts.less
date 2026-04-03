@@ -101,9 +101,15 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    min-width: 0;
 
     svg {
-      flex-shrink: 0;
+      display: block;
+      width: clamp(120px, 28vw, 160px);
+      max-width: 100%;
+      height: auto;
+      flex: 0 0 auto;
     }
   }
 
@@ -111,12 +117,13 @@
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
-    flex: 1;
+    flex: 1 1 220px;
+    min-width: 0;
   }
 
   .lc-legend-row {
     display: grid;
-    grid-template-columns: 10px 38px 1fr auto;
+    grid-template-columns: 10px 38px minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.4rem;
     padding: 0.2rem 0.4rem;
@@ -140,11 +147,13 @@
       font-size: 0.8rem;
       font-weight: 500;
       color: #444;
+      min-width: 0;
     }
 
     .lc-legend-count {
       font-size: 0.8rem;
       color: #1a1a1a;
+      min-width: 0;
 
       strong {
         font-weight: 700;
@@ -160,6 +169,44 @@
       font-size: 0.72rem;
       color: #888;
       white-space: nowrap;
+      min-width: 0;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .lc-solved-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.9rem;
+
+      svg {
+        align-self: center;
+      }
+    }
+
+    .lc-solved-legend {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+
+    .lc-legend-row {
+      grid-template-columns: 10px 38px minmax(0, 1fr);
+      grid-auto-rows: auto;
+      padding: 0.3rem 0.35rem;
+
+      .lc-legend-count {
+        justify-self: end;
+      }
+
+      .lc-legend-beats {
+        grid-column: 2 / -1;
+        justify-self: start;
+        white-space: normal;
+        line-height: 1.2;
+      }
     }
   }
 }

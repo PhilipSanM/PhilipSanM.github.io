@@ -4,16 +4,16 @@ import homecraftRoomGif from '../assets/homecraft_room.gif';
 import datasetThumbnailPng from '../assets/dataset-thumbnail.png';
 import loraPng from '../assets/lora.png';
 import menudoDdomingoPng from '../assets/menudodedomingo.png';
-import roadsJpeg from '../assets/roads.jpeg';
 import segmentPng from '../assets/segment.png';
 import spacesPng from '../assets/spaces.png';
 import trumpetPng from '../assets/trumpet.png';
+import unetGIf from '../assets/unet.gif';
 
 export const portfolioData: PortfolioData = {
   author: {
     name: 'PhilipSanM',
     title: 'AI Engineer & Software Developer Engineer',
-    bio: 'I am an AI engineering student at IPN in Mexico, focused on turning research into production-ready systems. I have deep experience in computer vision and machine learning models deployed to production, from experimentation and evaluation to monitoring and iteration. I am especially driven by the idea behind gradient descent: progress is rarely a giant leap, but the result of many small, consistent corrections in the right direction.',
+    bio: 'I am an AI engineer from the National Polytechnic Institute in Mexico, focused on turning research models into production-ready systems. I also work as a software engineer, with deep experience in computer vision and machine learning systems deployed to production, from experimentation and evaluation to monitoring and iteration. I am especially driven by the idea behind gradient descent: progress is rarely a giant leap, but the result of many small, consistent corrections in the right direction.',
     avatar: './assets/avatar.jpg',
   },
   contacts: [
@@ -113,7 +113,7 @@ export const portfolioData: PortfolioData = {
         'Ran evaluation on a ~1,000-image test split and analyzed behavior under low-light edge cases',
         'Reached 83% accuracy and validated improvements against pretrained segmentation baselines',
       ],
-      imageUrl: roadsJpeg,
+      imageUrl: unetGIf,
       year: 2024,
       featured: true,
     },
